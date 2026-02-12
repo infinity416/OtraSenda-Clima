@@ -1,0 +1,23 @@
+les=01
+sal=1997
+cdo mergetime geopt_d${les}*.nc ../../wrf_out_vars_merge/geopt_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime height_d${les}*.nc ../../wrf_out_vars_merge/height_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime hfx_d${les}*.nc ../../wrf_out_vars_merge/hfx_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime lh_d${les}*.nc ../../wrf_out_vars_merge/lh_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime pr_d${les}*.nc ../../wrf_out_vars_merge/pr_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime pressure_d${les}*.nc ../../wrf_out_vars_merge/pressure_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime psfc_d${les}*.nc ../../wrf_out_vars_merge/psfc_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime qfx_d${les}*.nc ../../wrf_out_vars_merge/qfx_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime rh_d${les}*.nc ../../wrf_out_vars_merge/rh_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime slp_d${les}*.nc ../../wrf_out_vars_merge/slp_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime t2m_d${les}*.nc ../../wrf_out_vars_merge/t2m_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime theta_d${les}*.nc ../../wrf_out_vars_merge/theta_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime tk_d${les}*.nc ../../wrf_out_vars_merge/tk_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime u10_d${les}*.nc ../../wrf_out_vars_merge/u10_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime u_d${les}*.nc ../../wrf_out_vars_merge/u_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime v10_d${les}*.nc ../../wrf_out_vars_merge/v10_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime v_d${les}*.nc ../../wrf_out_vars_merge/v_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime w_d${les}*.nc ../../wrf_out_vars_merge/w_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime wd10_d${les}*.nc ../../wrf_out_vars_merge/w10_d${les}_0106${sal}-3108${sal}.nc
+cdo mergetime ws10_d${les}*.nc ../../wrf_out_vars_merge/ws10_d${les}_0106${sal}-3108${sal}.nc
+
