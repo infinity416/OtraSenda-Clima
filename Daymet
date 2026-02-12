@@ -1,0 +1,20 @@
+for neg in *_tmax_2001.nc
+do
+cdo selname,tmax -selmon,06 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/${neg:0:-3}_06_rec.nc
+cdo selname,tmax -selmon,07 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/${neg:0:-3}_07_rec.nc
+cdo selname,tmax -selmon,08 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/${neg:0:-3}_08_rec.nc
+done
+
+for neg in *_tmin_2001.nc
+do
+cdo selname,tmin -selmon,06 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/${neg:0:-3}_06_rec.nc
+cdo selname,tmin -selmon,07 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/${neg:0:-3}_07_rec.nc
+cdo selname,tmin -selmon,08 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/${neg:0:-3}_08_rec.nc
+done
+
+for neg in *_prcp_2001.nc
+do
+cdo selname,prcp -selmon,06 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/${neg:0:-3}_06_rec.nc
+cdo selname,prcp -selmon,07 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/${neg:0:-3}_07_rec.nc
+cdo selname,prcp -selmon,08 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/${neg:0:-3}_08_rec.nc
+done
