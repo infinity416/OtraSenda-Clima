@@ -1,0 +1,12 @@
+DayMet:
+  https://search.earthdata.nasa.gov/search/granules?p=C2532426483-ORNL_CLOUD&pg[0][v]=f&pg[0][gsk]=-start_date&g=G2533272806-ORNL_CLOUD&q=daymet&lat=48.4946&long=-104.33454602346804&zoom=3.108271226773788
+
+Chirps:
+  https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/netcdf/byMonth/
+
+Livneh:
+  https://www.ncei.noaa.gov/data/oceans/ncei/archive/data/0129374/daily/
+
+era5:
+  https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=download
+Variables ("2m temperature","Total evaporation","10m u-component of wind","10m v-component of wind","Total precipitation")
