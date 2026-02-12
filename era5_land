@@ -1,0 +1,61 @@
+******** separar variables  *******************
+for les in era5_land_2001_*
+do
+cdo selname,t2m ${les:0:-3}.nc new/${les:0:-3}_t2m.nc
+cdo selname,tp ${les:0:-3}.nc new/${les:0:-3}_tp.nc
+cdo selname,e ${les:0:-3}.nc new/${les:0:-3}_e.nc
+cdo selname,u10 ${les:0:-3}.nc new/${les:0:-3}_u10.nc
+cdo selname,v10 ${les:0:-3}.nc new/${les:0:-3}_v10.nc
+done
+
+
+
+
+
+********       PRECIPITATION      ***********
+for les in era5_land_*
+do
+cdo selname,tp ${les:0:-3}.nc new/tp/${les:0:-3}_tp.nc
+done
+
+for les in era5_land_*
+do
+cdo seltime,0 ${les:0:-3}.nc ../new/${les:0:-3}_time.nc
+done
+
+me=1
+for vader in {01..31}
+do
+for les in era5_land_2002_06_*
+do
+let me=me+1
+cdo settaxis,2002-06-$vader,00:00:00 -selday,$me ${les:0:-3}.nc clas/${les:0:-3}_d$vader.nc
+done
+done
+
+
+cdo settaxis,1997-06-30,00:00:00 -selday,1 era5_land_1997_07_tp_time.nc clas/era5_land_1997_06_tp_time_d30.nc
+cdo settaxis,1997-07-31,00:00:00 -selday,1 era5_land_1997_08_tp_time.nc clas/era5_land_1997_07_tp_time_d31.nc
+cdo settaxis,1997-08-31,00:00:00 -selday,1 era5_land_1997_09_tp_time.nc clas/era5_land_1997_08_tp_time_d31.nc
+
+cdo settaxis,1998-06-30,00:00:00 -selday,1 era5_land_1998_07_tp_time.nc clas/era5_land_1998_06_tp_time_d30.nc
+cdo settaxis,1998-07-31,00:00:00 -selday,1 era5_land_1998_08_tp_time.nc clas/era5_land_1998_07_tp_time_d31.nc
+cdo settaxis,1998-08-31,00:00:00 -selday,1 era5_land_1998_09_tp_time.nc clas/era5_land_1998_08_tp_time_d31.nc
+
+cdo settaxis,2002-06-30,00:00:00 -selday,1 era5_land_2002_07_tp_time.nc clas/era5_land_2002_06_tp_time_d30.nc
+cdo settaxis,2002-07-31,00:00:00 -selday,1 era5_land_2002_08_tp_time.nc clas/era5_land_2002_07_tp_time_d31.nc
+cdo settaxis,2002-08-31,00:00:00 -selday,1 era5_land_2002_09_tp_time.nc clas/era5_land_2002_08_tp_time_d31.nc
+
+
+
+cdo mergetime era5_land_1997_06_tp_time_d*.nc months/era5_land_1997_06_tp_mod.nc
+cdo mergetime era5_land_1997_07_tp_time_d*.nc months/era5_land_1997_07_tp_mod.nc
+cdo mergetime era5_land_1997_08_tp_time_d*.nc months/era5_land_1997_08_tp_mod.nc
+
+cdo mergetime era5_land_1998_06_tp_time_d*.nc months/era5_land_1998_06_tp_mod.nc
+cdo mergetime era5_land_1998_07_tp_time_d*.nc months/era5_land_1998_07_tp_mod.nc
+cdo mergetime era5_land_1998_08_tp_time_d*.nc months/era5_land_1998_08_tp_mod.nc
+
+cdo mergetime era5_land_2002_06_tp_time_d*.nc months/era5_land_2002_06_tp_mod.nc
+cdo mergetime era5_land_2002_07_tp_time_d*.nc months/era5_land_2002_07_tp_mod.nc
+cdo mergetime era5_land_2002_08_tp_time_d*.nc months/era5_land_2002_08_tp_mod.nc
