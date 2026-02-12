@@ -1,0 +1,27 @@
+for neg in tmax.2001.nc
+do
+cdo selname,tmax -selmon,06 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/livneh.${neg:0:-3}.06.rec.nc
+cdo selname,tmax -selmon,07 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/livneh.${neg:0:-3}.07.rec.nc
+cdo selname,tmax -selmon,08 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/livneh.${neg:0:-3}.08.rec.nc
+done
+
+for neg in tmin.2001.nc
+do
+cdo selname,tmin -selmon,06 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/livneh.${neg:0:-3}.06.rec.nc
+cdo selname,tmin -selmon,07 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/livneh.${neg:0:-3}.06.rec.nc
+cdo selname,tmin -selmon,08 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/livneh.${neg:0:-3}.08.rec.nc
+done
+
+for neg in precip.2001.nc
+do
+cdo selname,precip -selmon,06 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/livneh.${neg:0:-3}.06.rec.nc
+cdo selname,precip -selmon,07 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/livneh.${neg:0:-3}.07.rec.nc
+cdo selname,precip -selmon,08 -sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/livneh.${neg:0:-3}.08.rec.nc
+done
+
+
+
+for neg in livneh_*.nc
+do
+cdo sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/${neg:0:-29}_${neg:26:-3}_rec.nc 
+done
