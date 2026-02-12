@@ -1,0 +1,4 @@
+for neg in *.2001.08.*.nc
+do
+cdo sellonlatbox,-113,-81,12,30 ${neg:0:-3}.nc new/${neg:0:-3}.rec.nc
+done
